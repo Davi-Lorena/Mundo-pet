@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+/* Font vars */
+--inter-tight: 'Inter Tight', sans-serif;
+
+--title: 600 1.5rem/2rem var(--inter-tight);
+
+--inter: 'Inter', sans-serif;
+ 
+--pg-md: 500 .875rem/1.5rem var(--inter);
+--pg-sm: 500 .75rem/1rem var(--inter);
+--label-lg: 600 1rem/1.5rem var(--inter);
+--label-md: 600 .875rem/1.5rem var(--inter);
+--label-sm: 600 .75rem/1rem var(--inter);
+--link: 500 .75rem/1rem var(--inter);
+
+}
