@@ -13,7 +13,7 @@
 --inter: 'Inter', sans-serif;
  
 --pg-md: 500 .875rem/1.5rem var(--inter);
---pg-sm: 500 .75rem/1rem var(--inter);
+--pg-sm: 400 .75rem/1rem var(--inter);
 --label-lg: 600 1rem/1.5rem var(--inter);
 --label-md: 600 .875rem/1.5rem var(--inter);
 --label-sm: 600 .75rem/1rem var(--inter);
@@ -52,7 +52,7 @@ img[src*="logo"] {
     all: unset;
     position: absolute;
     right: 2rem;
-    bottom: 2rem;
+    bottom: -2rem;
 
     background-color: var(--brand);
     padding: .75rem 1.5rem;
@@ -80,9 +80,7 @@ ul[role="list"] {
 .container {
 max-width: 1280px;
 width: 100%;
-padding: 5rem;
 margin-inline: auto;
-height: max-content;
 }
 
 
