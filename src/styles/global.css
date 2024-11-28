@@ -36,3 +36,19 @@
 --border-divisor: #353339;
 
 }
+
+body {
+    background-color: var(--bg-tertiary);
+}
+
+ul[role="list"] {
+    list-style: none;
+}
+
+/* Utilitary */
+
+.container {
+max-width: 54.4rem;
+width: 100%;
+padding: 5rem;
+}
