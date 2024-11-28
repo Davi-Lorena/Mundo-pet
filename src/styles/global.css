@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -38,7 +38,7 @@
 }
 
 body {
-    background-color: var(--bg-tertiary);
+    background-color: var(--bg-primary);
     position: relative;
 }
 
@@ -78,9 +78,10 @@ ul[role="list"] {
 /* Utilitary */
 
 .container {
-max-width: 54.4rem;
+max-width: 1280px;
 width: 100%;
 padding: 5rem;
+margin-inline: auto;
 height: max-content;
 }
 
