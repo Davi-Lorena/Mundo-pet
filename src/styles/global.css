@@ -19,4 +19,20 @@
 --label-sm: 600 .75rem/1rem var(--inter);
 --link: 500 .75rem/1rem var(--inter);
 
+/* Color vars */
+--content-primary: #ffffff;
+--content-secondary: #98959d;
+--content-tertiary: #666666;
+
+--brand: #9282fa;
+
+--bg-primary: #151515;
+--bg-secondary: #1e1e1e;
+--bg-tertiary: #23242c;
+--bg-highlights: #bdb4fa;
+
+--border-primary: #3e3c41;
+--border-secondary: #86818c;
+--border-divisor: #353339;
+
 }
