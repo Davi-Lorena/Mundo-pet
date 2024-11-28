@@ -93,7 +93,45 @@
     </ul>
 </section>
 </main>
-<button id="new-schedule">Novo agendamento</button>
+
+<button id="fixed" class="new-schedule">Novo agendamento</button>
+
+<form method="post" class="none">
+    <header>
+        <h1>Agende um atendimento</h1>
+        <span>Preencha os dados do cliente para realizar o atendimento</span>
+    </header>
+
+    <fieldset>
+
+        <label for="master">Nome do tutor</label>
+        <input type="text" placeholder="Nome do cliente" name="master" id="master">
+
+<label for="pet">Nome do pet</label>
+<input type="text" placeholder="Nome do pet" id="pet" name="pet">
+
+<label for="phone">Telefone</label>
+<input type="tel" placeholder="(00) 0 0000-0000" name="phone" id="phone">
+
+<label for="services">Descrição do serviço</label>
+<textarea name="services" id="services" placeholder="Digite os serviços"></textarea>
+
+<section id="date-time">
+    <div>
+        <label for="date">Data</label>
+        <input type="date" name="date" id="date">
+    </div>
+    <div>
+        <label for="hour">Hora</label>
+        <input type="time" name="hour" id="hour">
+    </div>
+</section>
+
+<button id="schedule-now" type="submit">Agendar</button>
+
+    </fieldset>
+
+</form>
 
 </body>
 </html>

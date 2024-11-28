@@ -1,0 +1,105 @@
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+    width: 30rem;
+    display: grid;
+    justify-content: center;
+    padding: 2.35rem 2.5rem;
+    background-color: var(--bg-tertiary);
+    border-radius: .75rem;
+
+& header {
+    margin-bottom: 1.75rem;
+}
+
+& fieldset {
+    display: grid;
+
+    & label {
+        font: var(--label-md);
+        color: var(--content-primary);
+        margin-bottom: .25rem;
+    }
+
+   & input[type="text"], input[type="tel"], input[type="time"] ,textarea {
+        border: 1px solid var(--border-primary);
+font: 400 1rem/1.5 var(--inter);
+border-radius: .5rem;
+margin-bottom: 1rem;
+transition: border-color 700ms ease;
+color: var(--content-primary);
+
+&::placeholder {
+    color: var(--content-tertiary);
+    transition: color 700ms ease;
+}
+
+&:hover {
+    border-color: var(--border-secondary);
+
+    &::placeholder {
+        color: var(--content-secondary);
+    }
+}
+
+&:focus {
+    border-color: var(--brand);
+}
+
+    }
+
+ & #master, #pet, #phone {
+    padding: .75rem 2.5rem;
+    background-repeat: no-repeat;
+    background-position: .75rem .65rem;
+}
+
+& #master {
+background-image: url(../assets/user.svg);
+}
+
+& #pet {
+    background-image: url(../assets/pet-paw.svg);
+}
+
+& #phone {
+    background-image: url(../assets/phone.svg);
+}
+
+& textarea {
+    padding: .75rem;
+}
+
+& #date-time {
+    display: flex;
+    justify-content: space-between;
+align-items: start;
+gap: 1rem;
+& div {
+    display: grid;
+}
+
+& #hour {
+    color: var(--content-secondary);
+    padding-block: .75rem;
+    padding-inline: 2.5rem .75rem;
+    background-image: url(../assets/clock.svg);
+    background-repeat: no-repeat;
+    background-position: .75rem;
+    width: 7rem;
+}
+
+}
+
+
+}
+
+& #schedule-now {
+    justify-self: end;
+    width: 5.5rem;
+    text-align: center;
+}
+}

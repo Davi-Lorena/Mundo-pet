@@ -1,3 +1,4 @@
+
 main {
     display: grid;
     justify-content: center;
@@ -11,49 +12,6 @@ margin-bottom: 2rem;
 display: flex;
 justify-content: space-between;
 align-items: center;
-
-& div {
-    & h1 {
-        color: var(--content-primary);
-        font: var(--title);
-    }
-
-    & span {
-        color: var(--content-secondary);
-        font: var(--pg-md);
-    }
-
-}
-
-& input[type="date"] {
-    all: unset;
-    position: relative;
-
-    border: 1px solid var(--border-primary);
-   padding-block: .75rem;
-    padding-inline: 2.5rem 1rem;
-    border-radius: .5rem;
-    color: var(--content-secondary);
-    font: 400 1rem/1.5 var(--inter);
-    text-transform: uppercase;
-    
-
-&::before {
-    content: "";
-    position: absolute;
-    background: url(../assets/calendar.svg);
-    width: 1.25rem;
-    left: .75rem;
-aspect-ratio: 1;
-}
-
-
-}
-
-::-webkit-calendar-picker-indicator {
-    background: url(../assets/Icon.svg);
-    cursor: pointer;
-}
 
     }
 
