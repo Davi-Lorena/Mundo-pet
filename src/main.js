@@ -7,3 +7,5 @@ import "./styles/form.css"
 
 // JS imports 
 import "./libs/dayjs.js"
+
+import { formIn } from "./modules/form-in.js"

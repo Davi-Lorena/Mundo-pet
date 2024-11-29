@@ -2,10 +2,12 @@
 main {
     display: grid;
     justify-content: center;
+   
 
    & #schedules {
        width: 54.4rem;
        padding: 5rem;
+
 
        & header {
 margin-bottom: 2rem;
@@ -101,3 +103,6 @@ width: 12.2rem;
 }
 
 }
+
+
+
