@@ -1,5 +1,5 @@
 const path = require('path')
-
+const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 target: "web",
@@ -19,4 +19,9 @@ mode: "development",
         open: true,
         liveReload: true,
     },
+
+plugins: [new HTMLWebpackPlugin({
+    template: path.resolve(__dirname, "index.html"),
+}),],
+
 }
