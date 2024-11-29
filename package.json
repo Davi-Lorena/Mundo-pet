@@ -1,15 +1,31 @@
 {
 
   "name": "mundo-pet",
+
   "author": "Davi Lorena",
+
   "description": "Sistema de agendamento de horários para um petshop",
 
   "scripts": {
-    "server": "json-server --watch server.json --port 3333"
+
+    "server": "json-server --watch server.json --port 3333",
+    "build": "webpack"
+
   },
 
-
   "dependencies": {
+
     "json-server": "^1.0.0-beta.3"
+
+  },
+
+  "devDependencies": {
+
+    "webpack": "^5.96.1",
+
+    "webpack-cli": "^5.1.4"
+
   }
+
 }
+
