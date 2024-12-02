@@ -9,16 +9,18 @@ const masterName = document.getElementById("master")
 const petName = document.getElementById("pet")
 const cellphone = document.getElementById("phone")
 const descriptionServices = document.querySelector("textarea")
-const date = document.getElementById("date")
+const dateInputs = document.querySelectorAll('input[type="date"]')
 const hour = document.getElementById("hour")
 
-// Manipulando um input com data 
+// Manipulando os inputs date 
 
-const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
+dateInputs.forEach(input => {
+    const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
 // Definindo o valor da data do input como a data atual
-date.value = inputToday
+input.value = inputToday
 // Defininindo a data mínima como a data atual, impedindo o acesso à dias anteriores ao "Hoje"
-date.min = inputToday
+input.min = inputToday
+} )
 
 // Validando o input de telefone 
 cellphone.oninput = () => {
