@@ -13,14 +13,6 @@ const descriptionServices = document.querySelector("textarea")
 const dateInputs = document.querySelectorAll('input[type="date"]')
 const hour = document.getElementById("hour")
 
-// Manipulando os inputs date
-dateInputs.forEach(input => {
-    const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
-    // Define o valor do input como a data atual 
-    input.value = inputToday
-    // Define a data tual como a data mínima para acesso (O ontem não existe mais)
-    input.min = inputToday
-})
 
 // Validando o input time
 const hourNow = dayjs().format("HH:mm")
@@ -29,6 +21,31 @@ const hourNow = dayjs().format("HH:mm")
 hour.value = hourNow;
 // o valor mínimo da hora é a hora atual, permitindo somente o agendamento de horários posteriores
 hour.min = hourNow;
+
+// Manipulando os inputs date
+dateInputs.forEach(input => {
+    const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
+    // Define o valor do input como a data atual 
+    input.value = inputToday
+    // Define a data tual como a data mínima para acesso (O ontem não existe mais)
+    input.min = inputToday
+
+    // Adicionando um evento para mudança de data 
+input.onchange = () => {
+    // selecionando a data atual e a data escolhida pelo usuário
+    const today = dayjs().startOf("day")
+    const selectedDate = dayjs(input.value)
+// Se a data escolhida for maior que a data atual, não haverá horário mínimo 
+if(selectedDate.isAfter(today)) {
+    hour.min = "00:00"
+} else {
+    hour.min = hourNow
+}
+
+
+}
+
+})
 
 // Validando o input de telefone
 cellphone.oninput = () => {
