@@ -49,9 +49,9 @@ border-radius: .675rem;
     display: flex;
     align-items: center;
     padding-block: 1rem;
-    padding-inline: 2rem 2.5rem;
+    margin-inline: 2rem 2.5rem;
     gap: 1rem;
-
+    
     & div {
         display: flex;
         align-items: center;
@@ -98,6 +98,10 @@ width: 12.2rem;
 
 }
 
+}
+
+& .schedule + .schedule {
+    border-top: 1px solid #2e2c30;
 }
 
 }
