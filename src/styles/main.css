@@ -77,9 +77,11 @@ width: 12.2rem;
     }
 
 & span {
+    line-break: anywhere;
     font: var(--pg-sm);
     color: var(--content-secondary);
-    width: 13.75rem;
+    width: 100%;
+    max-width: 13.75rem;
 }
 
 & button {

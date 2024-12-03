@@ -30,7 +30,7 @@
     <input type="date">
     </header>
 
-    <ul role="list">
+    <ul role="list" id="morning">
         <li class="title">
             <div>
                 <img src="./src/assets/sun-fog.svg" alt="Ícone de sol nascendo">
@@ -50,7 +50,7 @@
 <button class="remove">Remover agendamento</button>
         </li>
     </ul>
-    <ul role="list">
+    <ul role="list" id="afternoon">
         <li class="title">
             <div>
                 <img src="./src/assets/cloud-sun.svg" alt="Ícone de sol com nuvem">
@@ -70,7 +70,7 @@
 <button class="remove">Remover agendamento</button>
         </li>
     </ul>
-    <ul role="list">
+    <ul role="list" id="night">
         <li class="title">
             <div>
                 <img src="./src/assets/moon-star.svg" alt="Ícone de lua e estrelas">
@@ -105,25 +105,25 @@
     <fieldset>
 
         <label for="master">Nome do tutor</label>
-        <input type="text" placeholder="Nome do cliente" name="master" id="master">
+        <input type="text" placeholder="Nome do cliente" name="master" id="master" required>
 
 <label for="pet">Nome do pet</label>
-<input type="text" placeholder="Nome do pet" id="pet" name="pet">
+<input type="text" placeholder="Nome do pet" id="pet" name="pet" required>
 
 <label for="phone">Telefone</label>
-<input type="tel" placeholder="(00) 0 0000-0000" name="phone" id="phone">
+<input type="tel" placeholder="(00) 0 0000-0000" name="phone" id="phone" required>
 
 <label for="services">Descrição do serviço</label>
-<textarea name="services" id="services" placeholder="Digite os serviços"></textarea>
+<textarea name="services" id="services" placeholder="Digite os serviços" required></textarea>
 
 <section id="date-time">
     <div>
         <label for="date">Data</label>
-        <input type="date" name="date" id="date">
+        <input type="date" name="date" id="date"required>
     </div>
     <div>
         <label for="hour">Hora</label>
-        <input type="time" name="hour" id="hour">
+        <input type="time" name="hour" id="hour" required>
     </div>
 </section>
 
