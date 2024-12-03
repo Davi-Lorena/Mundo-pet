@@ -67,6 +67,9 @@ form.onsubmit = async (event) => {
 
         createSchedule( hour.value, pet, name, services, hourValue )
 
+        // Resetando o formulário 
+        form.reset()
+
     } catch (error) {
         // Exibição no console e alerta ao usuário caso haja algum erro
         console.log(error)
