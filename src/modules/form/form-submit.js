@@ -54,6 +54,8 @@ form.onsubmit = async (event) => {
         const name = masterName.value.trim()
         const pet = petName.value.trim()
         const services = descriptionServices.value.trim()
+
+
 // Transformando o valor do input time em array e capturando o primeiro valor (que seria a hora sem o ":00") para verificação 
         const hourParts = hour.value.split(":")
         const hourValue = parseInt(hourParts[0], 10)
@@ -69,10 +71,16 @@ form.onsubmit = async (event) => {
             return
         }
 
-
-
         // Gerando um ID para ser enviado para a API do agendamento
         const id = new Date().getTime()
+
+// Capturando somente o input date do formulário para gerar uma data/hora a ser enviada para api
+        const date = document.getElementById("date")
+        
+        const when = dayjs(date.value).add(hourValue, "hour")
+        console.log(when)
+
+console.log(id, name, pet, when)
 
         createSchedule( hour.value, pet, name, services, hourValue )
 
