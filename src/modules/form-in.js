@@ -22,6 +22,8 @@ buttonClose.onclick = () => {
     form.classList.remove("form")
     form.classList.add("none")
     buttonFixed.classList.remove("none")
+    form.reset()
+
 }
 
 })
