@@ -2,6 +2,8 @@ import dayjs from "dayjs"
 
 import { createSchedule } from "./create-schedule.js"
 
+import { sendSchedule } from "../../services/send-schedule.js"
+
 // Capturando o formulário
 const form = document.querySelector("form")
 
@@ -97,9 +99,9 @@ form.onsubmit = async (event) => {
         const when = dayjs(date.value).add(hourValue, "hour")
         console.log(when)
 
-console.log(id, name, pet, when)
+await sendSchedule({ id, name, pet, when })
 
-        createSchedule( hour.value, pet, name, services, hourValue )
+      await createSchedule( hour.value, pet, name, services, hourValue )
 
         // Resetando o formulário 
         form.reset()
