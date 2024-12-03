@@ -2,7 +2,6 @@ import dayjs from "dayjs"
 
 import { createSchedule } from "./create-schedule.js"
 
-
 // Capturando o formulário
 const form = document.querySelector("form")
 
@@ -22,6 +21,14 @@ dateInputs.forEach(input => {
     // Define a data tual como a data mínima para acesso (O ontem não existe mais)
     input.min = inputToday
 })
+
+// Validando o input time
+const hourNow = dayjs().format("HH:mm")
+ 
+// o valor inicial da hora é a hora atual 
+hour.value = hourNow;
+// o valor mínimo da hora é a hora atual, permitindo somente o agendamento de horários posteriores
+hour.min = hourNow;
 
 // Validando o input de telefone
 cellphone.oninput = () => {
@@ -61,6 +68,8 @@ form.onsubmit = async (event) => {
             alert("Por favor, insira uma descrição dos serviços.")
             return
         }
+
+
 
         // Gerando um ID para ser enviado para a API do agendamento
         const id = new Date().getTime()
