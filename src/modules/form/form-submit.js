@@ -101,8 +101,12 @@ form.onsubmit = async (event) => {
         console.log(when)
 
 await sendSchedule({ id, name, pet, when, services })
+
         // Resetando o formulário 
-        form.reset()
+        petName.value = ""
+    masterName.value = ""
+    descriptionServices.value = ""
+    cellphone.value = ""
 
     } catch (error) {
         // Exibição no console e alerta ao usuário caso haja algum erro

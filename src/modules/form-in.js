@@ -3,6 +3,11 @@ const buttonFixed = document.getElementById("fixed")
 const form = document.querySelector("form")
 const sectionSchedules = document.getElementById("schedules")
 
+const masterName = document.getElementById("master")
+const petName = document.getElementById("pet")
+const cellphone = document.getElementById("phone")
+const descriptionServices = document.querySelector("textarea")
+
 buttonFixed.addEventListener("click", () => {
 console.log("clicado")
 
@@ -22,7 +27,12 @@ buttonClose.onclick = () => {
     form.classList.remove("form")
     form.classList.add("none")
     buttonFixed.classList.remove("none")
-    form.reset()
+    
+    // Resetando o formulário
+    petName.value = ""
+    masterName.value = ""
+    descriptionServices.value = ""
+    cellphone.value = ""
 
 }
 
