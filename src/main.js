@@ -10,5 +10,5 @@ import "./libs/dayjs.js"
 
 import "./modules/form-in.js"
 import "./modules/form/form-submit.js"
-
+import "./modules/page-load.js"
 

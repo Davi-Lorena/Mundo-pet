@@ -1,8 +1,8 @@
 import dayjs from "dayjs"
 
-import { createSchedule } from "./create-schedule.js"
-
 import { sendSchedule } from "../../services/send-schedule.js"
+
+import { fetchSchedules } from "../../services/fetch-schedule.js"
 
 // Capturando o formulário
 const form = document.querySelector("form")
@@ -48,6 +48,7 @@ if(selectedDate.isAfter(today)) {
 }
 
 })
+
 
 // Validando o input de telefone
 cellphone.oninput = () => {
@@ -99,10 +100,7 @@ form.onsubmit = async (event) => {
         const when = dayjs(date.value).add(hourValue, "hour")
         console.log(when)
 
-await sendSchedule({ id, name, pet, when })
-
-      await createSchedule( hour.value, pet, name, services, hourValue )
-
+await sendSchedule({ id, name, pet, when, services })
         // Resetando o formulário 
         form.reset()
 

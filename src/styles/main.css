@@ -45,6 +45,10 @@ border-radius: .675rem;
 
 }
 
+& div {
+    min-height: 2rem;
+}
+
 & .schedule {
     display: flex;
     align-items: center;

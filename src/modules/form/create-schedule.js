@@ -1,6 +1,8 @@
-export function createSchedule( hour, pet, name, services, hourValue ) {
+import dayjs from "dayjs"
 
-    // capturando a section schedules  
+export function createSchedule( { schedule } ) {
+
+// capturando a section schedules  
 const sectionSchedules = document.getElementById("schedules")
 
 // Capturando o botão de "novo agendamento"
@@ -8,7 +10,6 @@ const newScheduleButton = document.getElementById("fixed")
 
 // Capturando o form 
 const form = document.querySelector("form")
-
 
     // capturando as listas de cada período do dia
     const morning = document.getElementById("morning")
@@ -18,20 +19,22 @@ const form = document.querySelector("form")
  // Criando a li que representará o novo agendamento
  const li = document.createElement("li")
  li.classList.add("schedule")
+li.setAttribute("data-id", schedule.id)
+
 
  // Criando uma div para organizar o layout da li
  const div = document.createElement("div")
 
  // Criando um terceiro título que exibirá a hora do agendamento 
  const hourSchedule = document.createElement("h3")
- hourSchedule.innerText = hour
+ hourSchedule.innerText = dayjs(schedule.when).format("HH:mm")
 
  // Criando uma span com um small dentro que conterão os nomes do dono e do pet
  const animalName = document.createElement("span")
- animalName.innerText = pet
+ animalName.innerText = schedule.pet
 
  const peopleName = document.createElement("small")
- peopleName.innerText = ` / ${name}`
+ peopleName.innerText = ` / ${schedule.name}`
 
  // Adicionando o small no span e a hora e os nomes na div de organização  
  animalName.appendChild(peopleName)
@@ -40,18 +43,19 @@ const form = document.querySelector("form")
 
  // Criando um span que conterá os serviços a serem realizados 
  const servicesElement = document.createElement("span")
- servicesElement.innerText = services
+ servicesElement.innerText = schedule.services
 
  // Criando o botão que removerá o agendamento, caso, necessário 
  const removeButton = document.createElement("button")
  removeButton.classList.add("remove")
  removeButton.innerText = "Remover agendamento"
- removeButton.onclick = () => li.remove()
 
 // Adicionando os itens à li 
 li.append(div, servicesElement, removeButton)
 
 // impondo uma condição para definir em qual lista o agendamento deverá ser exibido, de acordo com o horário 
+
+const hourValue = dayjs(schedule.when).hour()
     if (hourValue < 13) {
         morning.append(li)
     } else if (hourValue >= 13 && hourValue < 18) {
