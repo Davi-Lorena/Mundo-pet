@@ -108,6 +108,8 @@ await sendSchedule({ id, name, pet, when, services })
     descriptionServices.value = ""
     cellphone.value = ""
 
+    window.location.reload()
+
     } catch (error) {
         // Exibição no console e alerta ao usuário caso haja algum erro
         console.log(error)
