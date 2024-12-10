@@ -1,4 +1,5 @@
 import dayjs from "dayjs"
+import { cancel } from "../../services/cancel.js"
 
 export function createSchedule( { schedule } ) {
 
@@ -49,6 +50,13 @@ li.setAttribute("data-id", schedule.id)
  const removeButton = document.createElement("button")
  removeButton.classList.add("remove")
  removeButton.innerText = "Remover agendamento"
+
+ removeButton.onclick = async () => {
+
+   await cancel({ id: schedule.id })
+    li.remove()
+
+ }
 
 // Adicionando os itens à li 
 li.append(div, servicesElement, removeButton)

@@ -92,7 +92,7 @@ form.onsubmit = async (event) => {
         }
 
         // Gerando um ID para ser enviado para a API do agendamento
-        const id = new Date().getTime()
+        const id = new Date().getTime().toString()
 
 // Capturando somente o input date do formulário para gerar uma data/hora a ser enviada para api
         const date = document.getElementById("date")
