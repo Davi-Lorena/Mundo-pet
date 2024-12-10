@@ -1,32 +1,3 @@
 {
-  "schedulespet": [
-    {
-      "id": "1733832984696",
-      "name": "José",
-      "pet": "Thor",
-      "when": "2024-12-12T12:00:00.000Z",
-      "services": "asafa"
-    },
-    {
-      "id": "1733833923742",
-      "name": "asf",
-      "pet": "Ralf",
-      "when": "2024-12-10T12:00:00.000Z",
-      "services": "\\c\\zc\\cz"
-    },
-    {
-      "id": "1733833935811",
-      "name": "asf",
-      "pet": "afsaf",
-      "when": "2024-12-10T18:00:00.000Z",
-      "services": "asfsafsf"
-    },
-    {
-      "id": "1733834374506",
-      "name": "true",
-      "pet": "Ralf",
-      "when": "2024-12-10T12:00:00.000Z",
-      "services": "asasfasf"
-    }
-  ]
+  "schedulespet": []
 }
