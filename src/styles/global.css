@@ -74,7 +74,7 @@ button {
 .new-schedule {
     position: absolute;
     right: 2rem;
-    bottom: -2rem;
+    bottom: 1rem;
 }
 
 ul[role="list"] {
@@ -154,5 +154,26 @@ margin-inline: auto;
         background: rgba(0, 0, 0, 0.01);
         backdrop-filter: blur(6px);
         z-index: 1;
+    }
+}
+
+
+@media (width <= 600px) {
+    body {
+        display: grid;
+    }
+.new-schedule {
+position: unset;
+margin-inline: auto;
+margin-bottom: 2rem;
+}
+
+button {
+    justify-self: center;
+}
+
+
+    .container {
+        max-width: 360px;
     }
 }

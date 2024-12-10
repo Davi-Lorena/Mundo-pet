@@ -34,7 +34,7 @@
         margin-bottom: .25rem;
     }
 
-   & input[type="text"], input[type="tel"], input[type="time"] ,textarea {
+   & input[type="text"], input[type="tel"], input[type="time"], textarea {
         border: 1px solid var(--border-primary);
 font: 400 1rem/1.5 var(--inter);
 border-radius: .5rem;
@@ -88,6 +88,7 @@ background-image: url(../assets/user.svg);
     justify-content: space-between;
 align-items: start;
 gap: 1rem;
+margin-bottom: 1.75rem;
 & div {
     display: grid;
 }
@@ -113,3 +114,42 @@ gap: 1rem;
     text-align: center;
 }
 }
+
+@media (width <= 600px) {
+    .form {
+        width: 21rem;
+       padding: 2.5rem 1.25rem;
+
+& header {
+    width: 17.5rem;
+
+    & #close-icon {
+        right: -1.5rem;
+        top: -2.25rem
+    }
+
+}
+
+& fieldset {
+    justify-content: center;
+
+    & input[type="text"], input[type="tel"], input[type="time"] {
+        width: 12rem;
+    }
+
+& #date-time {
+    flex-direction: column;
+   
+
+& #hour, #date {
+    width: 14rem;
+}
+
+}
+
+}
+
+    }
+}
+
+
